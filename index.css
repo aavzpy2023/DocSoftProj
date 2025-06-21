@@ -1,0 +1,44 @@
+// --- /index.css ---
+/*
+  DocuHub Global Styles
+  Este archivo puede usarse para estilos CSS globales que complementan a Tailwind.
+*/
+
+/* Ejemplo: Estilos base para el cuerpo si quieres algo más allá del reset de Tailwind */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    color: #333; /* Un color de texto base, Tailwind lo maneja bien también */
+}
+
+/* Ejemplo: Un estilo global para todos los enlaces si no usas clases de Tailwind en todos ellos */
+/* a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+} */
+
+/*
+  Si mueves los estilos de la scrollbar aquí desde index.html:
+*/
+/* For Webkit browsers */
+/* ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+/* Puedes añadir más estilos globales aquí según necesites */
