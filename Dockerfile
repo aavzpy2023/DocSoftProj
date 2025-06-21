@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 # If you have a package-lock.json or yarn.lock, copy it too and use 'npm ci' or 'yarn install --frozen-lockfile'
 RUN npm install
-COPY . .      # Copia todo el contexto del proyecto, incluyendo index.html en /app/index.html
+COPY . .
 RUN npm run build  # Esto crea la carpeta 'dist' y 'dist/index.js' en /app/dist/index.js
 
 # --> ESTA ES LA LÍNEA QUE NECESITAS AÑADIR <--
