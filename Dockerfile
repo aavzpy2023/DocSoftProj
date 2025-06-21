@@ -12,10 +12,9 @@ RUN npm run build  # Esto crea la carpeta 'dist' y 'dist/index.js' en /app/dist/
 # al directorio /app/dist/ para que sea parte del output del build.
 COPY index.html ./dist/index.html
 
-# Stage 2: Esta etapa copia el contenido de /app/dist (que ahora incluye index.html y index.js)
-# al directorio /app/dist de la imagen final que se usa para popular el volumen.
+# Stage 2:
 FROM alpine:latest
-WORKDIR /app # Es buena práctica definir un WORKDIR también en la etapa final
-COPY --from=builder /app/dist ./dist/
-# También podrías copiar directamente a la raíz si el volumen se espera así:
-# COPY --from=builder /app/dist /app/
+# WORKDIR /app # WORKDIR aquí no es tan crucial si solo copias a la raíz del destino.
+# Copia el contenido de /app/dist de la etapa builder directamente a /app en esta etapa final.
+# El volumen frontend_dist se llenará con el contenido de /app de esta imagen.
+COPY --from=builder /app/dist /app/
