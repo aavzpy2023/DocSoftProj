@@ -38,7 +38,7 @@ services:
       dockerfile: Dockerfile # This is the frontend's Dockerfile
     container_name: docuhub_frontend_builder
     volumes:
-      - frontend_dist:/app
+      - frontend_dist:/app/dist
 
   nginx:
     image: nginx:stable-alpine
