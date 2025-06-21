@@ -1,0 +1,13 @@
+fastapi[all]
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+passlib[bcrypt]
+python-jose[cryptography]
+python-dotenv
+# email-validator is often pulled in by fastapi[all] or pydantic for EmailStr
+# but can be explicit if needed:
+# email-validator 
+
+# For database migrations (optional, but good practice for production)
+# alembic

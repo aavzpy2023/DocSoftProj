@@ -1,0 +1,5 @@
+{
+  "name": "DocuHub - Technical Documentation System",
+  "description": "A web application for creating, editing, managing, and publishing technical documentation based on Markdown, with PDF export capabilities.",
+  "requestFramePermissions": []
+}

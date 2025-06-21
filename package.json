@@ -1,0 +1,11 @@
+{
+  "name": "docuhub-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild index.tsx --bundle --outfile=dist/index.js --jsx=automatic --loader:.tsx=tsx --format=esm --external:react --external:react-dom --external:react-router-dom --sourcemap"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.4"
+  }
+}
