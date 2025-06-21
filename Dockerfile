@@ -10,7 +10,6 @@ RUN npm run build
 # se copie a la carpeta dist DENTRO de la etapa de build.
 COPY index.html ./dist/index.html
 COPY index.css ./dist/index.css
-COPY index.js ./dist/index.js
 
 # Stage 2: Serve the built app
 FROM alpine:latest
