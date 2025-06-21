@@ -10,5 +10,5 @@ COPY index.html ./dist/index.html
 
 # Stage 2:
 FROM alpine:latest
-WORKDIR /app
+WORKDIR /html_root
 COPY --from=builder /app/dist ./dist/

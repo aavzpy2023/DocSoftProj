@@ -38,7 +38,7 @@ services:
       dockerfile: Dockerfile # This is the frontend's Dockerfile
     container_name: docuhub_frontend_builder
     volumes:
-      - frontend_dist:/app/dist
+      - frontend_dist:/html_root
 
   nginx:
     image: nginx:stable-alpine
@@ -47,7 +47,7 @@ services:
       - "8080:80"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-      - frontend_dist:/usr/share/nginx/html/frontend:ro # Serve built frontend assets
+      - frontend_dist:/usr/share/nginx/html/frontend:ro
     depends_on:
       - backend
       - frontend_builder # Ensure frontend assets are built before Nginx starts
