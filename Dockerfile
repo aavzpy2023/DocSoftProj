@@ -16,3 +16,4 @@ FROM alpine:latest
 COPY --from=builder /app/dist /app/dist
 # You could add an entrypoint that does nothing or just lists files if you ever run it directly
 # For example: ENTRYPOINT ["ls", "-la", "/app/dist"]
+# TEST##
